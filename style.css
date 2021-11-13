@@ -1,0 +1,284 @@
+:root {
+    --Pale-Violet: hsl(276, 100%, 81%);
+    --chat-left: hsl(276, 55%, 52%);
+    --chat-right: hsl(271, 15%, 43%);
+    --placeholder-text: hsl(206, 6%, 79%);
+    --main-heading: hsl(271, 36%, 24%);
+    --paragraph: hsl(270, 7%, 64%);
+    /* 
+#### Gradients
+
+These two colors are the vibrant background colors you see throughout the design and are applied as a linear gradient: */
+
+    --Light-Magenta: hsl(293, 100%, 63%);
+    --Light-Violet: hsl(264, 100%, 61%);
+    --body-bg: linear-gradient(45deg, hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+
+    /* Secondary */
+
+    --White: hsl(0, 0%, 100%);
+    --app-background: hsl(270, 20%, 96%);
+    --submit-button-bg: hsl(271, 36%, 24%);
+    --radio-button-outline: hsl(289, 100%, 72%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 11px;
+    background-color: var(--app-background);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#bg {
+    background: linear-gradient(hsl(293, 100%, 63%), hsl(264, 100%, 61%));
+    height: 500px;
+    width: 350px;
+    border-bottom-right-radius: 80%;
+    content: '';
+    position: fixed;
+    top: -40px;
+    left: -100px;
+    z-index: -1;
+}
+
+.main {
+    width: 90%;
+    max-width: 370px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.phone-wrapper {
+    padding: 0 15px;
+}
+
+.phone {
+    background-color: var(--app-background);
+    border: 10px solid white;
+    border-radius: 40px;
+}
+
+.header {
+    background: linear-gradient(
+        90deg,
+        var(--Light-Violet),
+        var(--Light-Magenta)
+    );
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    height: 90px;
+    padding: 0 10px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.header img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-right: 7px;
+}
+
+.notch {
+    background-color: #fff;
+    height: 15px;
+    width: 40%;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    align-self: center;
+    margin-bottom: 1rem;
+    /* margin-top: -5px; */
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav .profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile span {
+    margin-right: 10px;
+}
+
+.profile p {
+    font-size: 15px;
+    color: var(--paragraph);
+}
+.user {
+    display: flex;
+    align-items: center;
+}
+
+.chat {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+}
+
+.message {
+    max-width: 80%;
+    padding: 10px;
+    border-radius: 12px;
+    background-color: var(--White);
+    margin: 5px;
+    display: flex;
+}
+
+.right {
+    align-self: flex-end;
+    color: var(--chat-right);
+    background-color: #fff;
+    border-bottom-right-radius: 0;
+}
+
+.left {
+    color: var(--chat-left);
+    background-color: var(--placeholder-text);
+    border-bottom-left-radius: 0;
+}
+
+.images {
+    background-color: inherit;
+    box-sizing: border-box;
+    /* width: 90%; */
+}
+
+.images img {
+    height: 50px;
+    width: 50px;
+    margin-left: 4px;
+    border-radius: 5px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+
+    color: #fff;
+    background: linear-gradient(
+        45deg,
+        var(--Light-Violet),
+        var(--Light-Magenta)
+    );
+}
+
+.price p {
+    flex: 9;
+}
+
+.price h3 {
+    justify-content: flex-end;
+    font-size: 18px;
+}
+
+.check {
+    color: var(--radio-button-outline);
+    margin-right: 10px;
+    font-size: 17px;
+}
+
+.sender {
+    position: relative;
+    height: 40px;
+    margin: 15px 15px;
+    background-color: #fff;
+    box-sizing: border-box;
+    border-radius: 20px;
+}
+
+.sender input {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    padding-left: 20px;
+}
+
+input::placeholder {
+    color: var(--placeholder-text);
+}
+
+.sender span {
+    position: absolute;
+    color: #fff;
+    cursor: pointer;
+    right: 20px;
+    top: 10%;
+    right: 5px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: var(--submit-button-bg);
+    display: grid;
+    place-content: center;
+}
+
+.secondary {
+    text-align: center;
+    margin: 50px 0px;
+}
+
+.secondary h2 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.secondary p {
+    line-height: 25px;
+    font-size: 15px;
+    color: var(--paragraph);
+}
+
+@media only screen and (min-width: 800px) {
+    #bg {
+        height: 600px;
+        width: 500px;
+        top: -40px;
+        left: -90px;
+        border-bottom-left-radius: 80%;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    #bg {
+        height: 600px;
+        width: 500px;
+        top: -40px;
+        left: -100px;
+        border-bottom-left-radius: 80%;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: row;
+        place-content: center;
+        max-width: 80%;
+        grid-template-columns: 2fr 2fr;
+    }
+
+    .phone-wrapper {
+        width: 400px;
+    }
+
+    .secondary {
+        width: 400px;
+    }
+}
